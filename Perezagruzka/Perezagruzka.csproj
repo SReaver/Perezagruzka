@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Day7\Day7.csproj">
+      <Project>{7169be51-65aa-4050-8469-fe418711d167}</Project>
+      <Name>Day7</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyClassLib\MyClassLib.csproj">
       <Project>{37796200-e3ae-424e-b274-9f27670cd376}</Project>
       <Name>MyClassLib</Name>

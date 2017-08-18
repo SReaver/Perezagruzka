@@ -13,14 +13,20 @@ namespace MyClassLib
         private int ammunition { get; set; }
         private int armor { get; set; }
         private int mobility { get; set; }
-        Random rnd = new Random();
-        public Tank(string name)
+        public bool isWinner;
+    
+        public Tank(string name, int ammunition, int armor, int mobility)
         {
             this.name = name;
-            this.ammunition = rnd.Next(0, 100);
-            this.armor = rnd.Next(0, 100);
-            this.mobility = rnd.Next(0, 100);
+            this.ammunition = ammunition;
+            this.armor = armor;
+            this.mobility = mobility;
+            isWinner = false;
 
+        }
+        public string GetTankName()
+        {
+            return name;
         }
 
 
@@ -59,6 +65,7 @@ namespace MyClassLib
         public void TankInfo()
         {
             Console.WriteLine($"Имя танка: {name}\nБоекомплект: {ammunition}\nБроня: {armor}\nМобильность {mobility}");
+            Console.WriteLine("----------------");
         }
 
     }
